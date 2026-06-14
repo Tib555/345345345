@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дифференциальная геометрия | Ответы</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- MathJax Configuration -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['\\(', '\\)']],
+          displayMath: [['\\[', '\\]']],
+          processEscapes: true
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <!-- MathJax Library -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Дифференциальная геометрия</h1>
+            <p class="subtitle">Интерактивный справочник с подробными ответами, теоремами и формулами</p>
+        </header>
+
+        <main id="home-view" class="tiles-container">
+            <div class="tile" id="tile-theory">
+                <div class="tile-icon">📚</div>
+                <h2>Теория</h2>
+                <p>Экзаменационные билеты, теоремы и формулы</p>
+            </div>
+            <div class="tile" id="tile-examples">
+                <div class="tile-icon">✏️</div>
+                <h2>Примеры</h2>
+                <p>Практические задачи (скоро)</p>
+            </div>
+        </main>
+
+        <div id="theory-view" style="display: none;">
+            <button id="back-btn-theory" class="back-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Назад на главную
+            </button>
+
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Поиск по темам (например, 'квадратичная форма')...">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+
+            <div id="questions-container" class="accordion">
+                <!-- Вопросы будут добавлены через JavaScript -->
+            </div>
+        </div>
+
+        <div id="examples-view" style="display: none;">
+            <button id="back-btn-examples" class="back-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Назад на главную
+            </button>
+            <div id="examples-container" class="accordion">
+                <!-- Примеры будут добавлены через JavaScript -->
+            </div>
+        </div>
+        
+        <footer>
+            <p>Удачи на экзамене! ✨</p>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="examples.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
